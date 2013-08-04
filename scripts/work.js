@@ -47,7 +47,7 @@ function Work_Class(){
     $('.category-image').on('mouseenter',function(){
       setCategoryName($(this));
     }).on('mouseleave',function(){
-      //hideCategoryName($(this));
+      //
     }).on('click',function(){
       selectCategory($(this));
     });
@@ -57,18 +57,6 @@ function Work_Class(){
     clearTimeout($menuInfo.data('timeoutid'));
     var categoryName = $thisImage.attr('alt');
     $menuInfo.find('#info-content').html(categoryName);
-    //showCategoryName();
-  }
-
-  function showCategoryName(){
-    $menuInfo.slideDown(200);
-  }
-
-  function hideCategoryName($thisImage){
-    var categoryNameTimeout = setTimeout(function(){
-      $menuInfo.slideUp(200);
-    }, 500);
-    $menuInfo.data('timeoutid', categoryNameTimeout);
   }
 
   function selectCategory($thisImage){
